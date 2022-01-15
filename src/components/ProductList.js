@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Loading from '../routes/Loading'
 import ProductItem from './ProductItem'
+import { Link } from 'react-router-dom'
 const url = 'https://fakestoreapi.com/products'
 
 const StyledProductList = styled.section`
@@ -41,7 +42,9 @@ const ProductList = () => {
         const { image, id, title, price } = product
 
         return (
-          <ProductItem key={id} image={image} title={title} price={price} />
+          <Link to={`/products/${id}`} key={id}>
+            <ProductItem image={image} title={title} price={price} />
+          </Link>
         )
       })}
     </StyledProductList>

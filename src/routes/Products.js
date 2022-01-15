@@ -1,4 +1,5 @@
 import React, { useReducer, createContext } from 'react'
+import { Outlet } from 'react-router-dom'
 import ProductList from '../components/ProductList'
 
 export const CartContext = createContext()
@@ -13,7 +14,7 @@ const Products = () => {
     <CartContext.Provider value={{ cart, setCart }}>
       <section className='section'>
         <h1> Products</h1>
-        <ProductList />
+        <Outlet />
       </section>
     </CartContext.Provider>
   )
