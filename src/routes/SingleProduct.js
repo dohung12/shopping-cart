@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link, useParams } from 'react-router-dom'
 import Loading from './Loading'
 import { FaPlus, FaMinus } from 'react-icons/fa'
+import AddToCart from '../components/AddToCart'
 
 const StyledSection = styled.section`
   margin-top: 3rem;
@@ -22,6 +23,8 @@ const StyledDiv = styled.div`
 `
 const BtnContainer = styled.div`
   display: flex;
+  align-items: center;
+  align-self: center;
   gap: 1rem;
 
   button {
@@ -59,7 +62,6 @@ const SingleProduct = () => {
 
   const { description, image, price, title } = product
 
-  console.log(product)
   return (
     <>
       <Link to='/products' className='btn'>
@@ -92,7 +94,7 @@ const SingleProduct = () => {
             </button>
           </BtnContainer>
 
-          <button className='btn'>Add to Cart</button>
+          <AddToCart id={id} quantity={quantity} />
         </StyledDiv>
       </StyledSection>
     </>
