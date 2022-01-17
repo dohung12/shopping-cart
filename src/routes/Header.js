@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+import { FaShoppingCart } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const StyleNav = styled.nav`
@@ -42,6 +42,12 @@ const Header = () => {
           </li>
           <li>
             <Link to='/products'>Products</Link>
+          </li>
+          <li>
+            <Link to='/products/cart'>
+              <FaShoppingCart />
+              Cart
+            </Link>
           </li>
         </StyledNavLinks>
       </StyleNav>
