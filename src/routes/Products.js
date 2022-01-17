@@ -1,18 +1,19 @@
 import React, { useReducer, createContext } from 'react'
 import { Outlet } from 'react-router-dom'
+import reducer from '../components/reducer'
 
 export const CartContext = createContext()
 
-function reducer(state, item) {
-  return [...state, item]
-}
-
 const Products = () => {
-  const [cart, setCart] = useReducer(reducer, [])
+  const [state, dispatch] = useReducer(reducer, { cart: [] })
+
+  const addToCart = (id, quantity) => {
+    dispatch({ type: 'ADD_TO_CART', payload: { id, quantity } })
+  }
+
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    <CartContext.Provider value={{ ...state, addToCart }}>
       <section className='section'>
-        {/* <h1> Products</h1> */}
         <Outlet />
       </section>
     </CartContext.Provider>
