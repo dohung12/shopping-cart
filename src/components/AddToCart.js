@@ -3,13 +3,15 @@ import React, { useContext } from 'react'
 import { CartContext } from '../routes/Products'
 
 const AddToCart = ({ id, quantity }) => {
-  const { setCart } = useContext(CartContext)
-  const CartUpdate = () => {
-    setCart({ productId: id, quantity })
-  }
+  const { addToCart } = useContext(CartContext)
 
   return (
-    <button className='btn' onClick={CartUpdate}>
+    <button
+      className='btn'
+      onClick={() => {
+        addToCart(id, quantity)
+      }}
+    >
       Add to Cart
     </button>
   )
