@@ -10,7 +10,7 @@ import Cart from './routes/Cart'
 
 function App() {
   return (
-    <HashRouter basename='/'>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Header />}>
           <Route path='/' element={<Home />}></Route>
