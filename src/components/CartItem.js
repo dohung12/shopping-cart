@@ -30,6 +30,12 @@ const StyledArticle = styled.article`
   button {
     background-color: transparent;
     border: transparent;
+    color: var(--primary-700);
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    color: var(--primary-400);
   }
 
   .remove-btn {

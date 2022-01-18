@@ -19,7 +19,7 @@ const StyledCart = styled.section`
   min-height: calc(100vh - 120px);
   width: 90vw;
   margin: 0 auto;
-  margin-top: 40px;
+
   padding: 2.5rem 0;
   max-width: 50rem;
 
