@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './routes/Header'
 import Home from './routes/Home'
 import Products from './routes/Products'
@@ -10,7 +10,7 @@ import Cart from './routes/Cart'
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename='/'>
       <Routes>
         <Route path='/' element={<Header />}>
           <Route path='/' element={<Home />}></Route>
