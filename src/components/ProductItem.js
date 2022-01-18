@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const StyledSingleProduct = styled.button`
+  cursor: pointer;
   background-color: transparent;
   border: transparent;
   img {
