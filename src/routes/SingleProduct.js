@@ -94,7 +94,7 @@ const SingleProduct = () => {
             </button>
           </BtnContainer>
 
-          <AddToCart id={id} quantity={quantity} />
+          <AddToCart id={id} quantity={quantity} price={price} />
         </StyledDiv>
       </StyledSection>
     </>
