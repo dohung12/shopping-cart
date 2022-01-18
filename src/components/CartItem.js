@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalContext } from '../routes/Products'
 import { FaPlus, FaMinus } from 'react-icons/fa'
-import Loading from '../routes/Loading'
 import styled from 'styled-components'
 const url = 'https://fakestoreapi.com/products/'
 
